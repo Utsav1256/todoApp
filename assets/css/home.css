@@ -1,0 +1,112 @@
+
+
+ body {
+    
+    margin: 0;
+    
+    font-family: sans-serif;
+    
+    background-color: rgb(180, 170, 158);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ed79ff;
+   
+    
+}
+
+#page-heading {
+    
+    text-align: center;
+    
+    margin: 25px;
+    
+    color: rgb(169 39 156);
+    background-color: aquamarine;
+}
+
+
+
+.topic-name {
+    font-size: 1.5em;
+}
+
+ul {
+    
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.list-item {
+    list-style: none;
+    
+}
+
+
+.date {
+    width: 6em;
+    /* height: 10px; */
+    text-align: center;
+    /* margin-top: 10px; */
+    padding: 0.3em 0.5em;
+    background-color: rgb(237, 237, 237);
+    border-radius: 100px;
+    /* border-top-left-radius: 0; */
+    /* font-size: 0.8em; */
+}
+.task-section {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 0 1.5em;
+    transition: 0.3s;
+
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.task-section:hover {
+    background-color: rgb(236, 162, 64);
+}
+
+i {
+    
+    font-size: 1.7rem;
+    color: rgb(2, 80, 216);
+}
+
+
+.delete {
+    padding-left: 1em;
+    color: red;
+}
+
+.add-task {
+    
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    
+    
+}
+
+
+.typing-task {
+    margin: 0;
+    
+}
+
+.task-completed {
+    width: 30px;
+    height: 50px;
+    /* padding-left: 30px; */
+}
+

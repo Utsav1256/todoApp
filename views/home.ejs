@@ -1,0 +1,76 @@
+
+<html>
+    <head>
+        <title>
+            <%= locals.title %>
+        </title>
+      
+        <script src="https://kit.fontawesome.com/7e638bcd68.js" crossorigin="anonymous"></script>
+   
+       
+        <link rel="stylesheet" href="/css/home.css">
+     
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="page-heading">
+                
+                <i class="fa-regular fa-circle-check"></i> 
+                My To Do List</h1>
+
+            <section class="task-library">
+                <ul>
+                    
+                    
+                        <% for(let i of contact_list) { %> 
+                            <div class="task-section"> 
+                                <li class="list-item">
+                                    <div class="details">
+                                        <p class="topic-name"> <%= i.task %> </p>
+                                        <p class="topic-name"> <%= i.category %> </p>
+                                        <p class="given_time"><%= i.time %></p>
+                                        <p class="due_date"> <%= i.date %> </p>
+                                        <input type="checkbox" value="completed" class="task-completed">
+                                        <a href="/delete-task/?id=<%= i._id %>">
+                                            <i class="fa-solid fa-trash delete"></i>
+                                        </a>
+                                    </div>
+                                    
+                                </li>
+                                                     
+                            </div>
+                        <% } %> 
+                    
+                </ul>
+            </section>
+            
+        
+            <div class="add-task">
+                <form action="/create-task" method="POST">
+                    
+                    <label for="comment">Add Task: </label>
+                    <input type="text" name="my_task" placeholder="eg. do a project" required>
+                    <br>
+                    <label for="comment">Pick a Category: </label>
+                            <select name = "dropdown" name="category">
+                                <option value = "Business" >Business</option>
+                                <option value = "Personal">Personal</option>
+                                <option value = "College">College</option>
+                            </select>
+                            
+                    
+                    <br>
+                    <label for="comment">Due Date: </label>
+                    <input type="date" name="due_date"  required>
+                    <br>
+                    <label for="comment">Given Time: </label>
+                    <input type="time" name="given_time"  required>
+                    <br>
+                    <button type="submit"> Add todo </button>
+                </form>
+            </div>
+        
+        </div>
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
